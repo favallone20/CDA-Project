@@ -1,8 +1,8 @@
 function u  = forward_chain(in)
 %CHAIN Summary of this function goes here
 %   Detailed explanation goes here
-m = 100
-J = 10
+m = 230
+J = 2100
 l = 1
 g= 9.81
 v = in(1)
