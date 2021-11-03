@@ -7,7 +7,7 @@ yd_dotdot= in(3)
 yd_dot=in(4)
 yd = in(5)
 kp = -10
-v = kp*(y-yd)+kp*(ydot-yd_dot)+yd_dotdot;
+v = kp*(y-yd)+kp*(ydot-yd_dot);
 out = [v; y]
 end
 
