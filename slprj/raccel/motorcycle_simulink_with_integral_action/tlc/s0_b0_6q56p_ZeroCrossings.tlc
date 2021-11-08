@@ -1,0 +1,26 @@
+%implements s0_b0_6q56p_ZeroCrossings "C"
+
+%function ZeroCrossings(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+ZCV *_rtZCSV;
+%closefile localVarDecl
+%<SLibCG_TrackZCSV(0)>\
+_rtZCSV = %<(SLibCG_SE(SLibGetZCSignalValueStrucPtr()))>;
+_rtZCSV->emm2iaym2b = %<(SLibCG_SE(LibGetT()))> - rtP.Step_Time;
+_rtZCSV->c4s5rrcusq = %<(SLibCG_SE(LibGetT()))> - rtP.Step1_Time;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedZeroCrossingLocalVars", localVarDecl)>
+%endfunction
+%function ZeroCrossingsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ZeroCrossings(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 6, fcnProtoType)>
+%endfunction

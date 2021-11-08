@@ -1,0 +1,80 @@
+%implements s0_b0_6q56p_Update "C"
+
+%function UpdateForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T *lastU;
+%closefile localVarDecl
+if (rtDW.bqhxkkbv3v == %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>) {
+    rtDW.bqhxkkbv3v = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.ovz50mnyjh;
+} else if (rtDW.cz3l2yjpuz == %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>) {
+    rtDW.cz3l2yjpuz = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.ixl4qta5jq;
+} else if (rtDW.bqhxkkbv3v < rtDW.cz3l2yjpuz) {
+    rtDW.bqhxkkbv3v = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.ovz50mnyjh;
+} else {
+    rtDW.cz3l2yjpuz = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.ixl4qta5jq;
+}
+*lastU = rtB.pz0fn3hwfd[0];
+if (rtDW.bvlfu0dczz == %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>) {
+    rtDW.bvlfu0dczz = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.fukfqpn0kt;
+} else if (rtDW.bgx1ukdalt == %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>) {
+    rtDW.bgx1ukdalt = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.awufy0jx3y;
+} else if (rtDW.bvlfu0dczz < rtDW.bgx1ukdalt) {
+    rtDW.bvlfu0dczz = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.fukfqpn0kt;
+} else {
+    rtDW.bgx1ukdalt = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.awufy0jx3y;
+}
+*lastU = rtB.m0hpgqra5p;
+if (rtDW.gfnkufradz == %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>) {
+    rtDW.gfnkufradz = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.lcpruueqr2;
+} else if (rtDW.jyduquucsk == %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>) {
+    rtDW.jyduquucsk = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.mtfbkuhns2;
+} else if (rtDW.gfnkufradz < rtDW.jyduquucsk) {
+    rtDW.gfnkufradz = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.lcpruueqr2;
+} else {
+    rtDW.jyduquucsk = %<(SLibCG_SE(LibGetT()))>;
+    lastU = &rtDW.mtfbkuhns2;
+}
+*lastU = rtB.iyrr1qhkra;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedUpdateLocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function UpdateFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
