@@ -8,8 +8,7 @@ yd_dot=in(4)
 yd = in(5)
 z = in(6)
 kp = -10
-ki= 0
-v = kp*(y-yd)+kp*(ydot-yd_dot)-ki*z;
+v = kp*(y-yd)+kp*(ydot-yd_dot)+yd_dotdot;
 zdot = y - yd
 out = [v; y; zdot]
 end
