@@ -20,7 +20,7 @@ det(Wo) % Il sistema è osservabile
 [NumRowsB NumColsB]=size(B);
 I = eye(NumRowsA, NumColsA);
 %% Pole placement for the reachability
-P=[-5 -10]; %% they are the desired poles
+P=[- -20]; %% they are the desired poles
 k = place(A,B,P)
 kr=-1/(C*inv(A-B*k)*B)
 
@@ -41,9 +41,9 @@ L=L_t.'
 
 %% LQR 
 % %If you don't want to use LQR you should comment this section
-% Qx = [20 0; 0 20];
-% Qu = eye(NumColsB);
-% [L_t,S,Pl] = lqr(A.',C.',Qx,Qu)
-% det(s*I-A.'+C.'*L_t)
-% L = L_t.'
+Qx = [20 0; 0 20];
+Qu = eye(NumColsB);
+[L_t,S,P] = lqr(A.',C.',Qx,Qu)
+det(s*I-A.'+C.'*L_t)
+L = L_t.'
 
